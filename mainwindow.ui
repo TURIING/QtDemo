@@ -84,8 +84,36 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
      <property name="text">
       <string>输入的IP为:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>331</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>拾色器</string>
+    </property>
+    <widget class="ColorPicker" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>311</width>
+       <height>108</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -96,7 +124,7 @@
      <x>0</x>
      <y>0</y>
      <width>1180</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
@@ -107,6 +135,12 @@
    <class>IPLineEdit</class>
    <extends>QWidget</extends>
    <header>iplineedit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ColorPicker</class>
+   <extends>QWidget</extends>
+   <header>ColorPicker.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

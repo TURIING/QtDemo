@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include "iplineedit.h"
+#include "ColorPicker.h"
 #include <QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -27,6 +28,7 @@ private:
 private slots:
     void onBtnMakeIPClicked();
     void onBtnClearIPClicked();
+    void onBtnOpenColorPickerClicked();
 };
 
 

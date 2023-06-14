@@ -31,3 +31,7 @@ void MainWindow::onBtnClearIPClicked() {
     ui->label_ip->clear();
 }
 
+void MainWindow::onBtnOpenColorPickerClicked() {
+
+}
+

@@ -14,7 +14,7 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR})
-add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui)
+add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h)
 target_link_libraries(QtDemo
         Qt5::Core
         Qt5::Gui
