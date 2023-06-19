@@ -9,16 +9,25 @@
 
 
 MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWindow) {
+    /* 初始化 */
     ui->setupUi(this);
+
+    // IP编辑框
     ui->label_ip->setStyleSheet("color:red;");
+    // GifCapture
+    m_gifCapture = new GifCapture();
+    m_gifCapture->setWindowFlags(Qt::WindowStaysOnTopHint | m_gifCapture->windowFlags());
+
+
     /* 信号槽 */
     connect(ui->btn_makeIP, &QPushButton::clicked, this, &MainWindow::onBtnMakeIPClicked);
     connect(ui->btn_clearIP, &QPushButton::clicked, this, &MainWindow::onBtnClearIPClicked);
-
+    connect(ui->btn_gifPopup, &QPushButton::clicked, this, &MainWindow::onBtnGifPopupClicked);
 
 }
 
 MainWindow::~MainWindow() {
+    delete m_gifCapture;
     delete ui;
 }
 
@@ -31,7 +40,8 @@ void MainWindow::onBtnClearIPClicked() {
     ui->label_ip->clear();
 }
 
-void MainWindow::onBtnOpenColorPickerClicked() {
-
+void MainWindow::onBtnGifPopupClicked() {
+    m_gifCapture->show();
 }
+
 

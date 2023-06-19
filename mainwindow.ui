@@ -20,7 +20,7 @@
       <x>30</x>
       <y>30</y>
       <width>251</width>
-      <height>131</height>
+      <height>141</height>
      </rect>
     </property>
     <property name="title">
@@ -97,8 +97,8 @@
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>180</y>
+      <x>290</x>
+      <y>30</y>
       <width>331</width>
       <height>140</height>
      </rect>
@@ -114,6 +114,32 @@
        <width>311</width>
        <height>108</height>
       </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>251</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Gif录屏</string>
+    </property>
+    <widget class="QPushButton" name="btn_gifPopup">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>98</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>点击弹出</string>
      </property>
     </widget>
    </widget>

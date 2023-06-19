@@ -6,9 +6,12 @@
 #define QTDEMO_MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPushButton>
+
 #include "iplineedit.h"
 #include "ColorPicker.h"
-#include <QPushButton>
+#include "GifCapture.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,11 +27,12 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    GifCapture *m_gifCapture;
 
 private slots:
     void onBtnMakeIPClicked();
     void onBtnClearIPClicked();
-    void onBtnOpenColorPickerClicked();
+    void onBtnGifPopupClicked();
 };
 
 

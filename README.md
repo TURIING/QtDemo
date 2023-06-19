@@ -13,3 +13,8 @@
 
 **涉及**：QGridLayout、QVBoxLayout、QHBoxLayout、QScreen、QMouseEvent、QImage、QTimer、QLineEdit
 
+## Gif录屏
+
+<img src="https://image.turiing.cn/images/2023/06/18/image-20230618145734843.png" alt="image-20230618145734843" style="zoom:80%;" />
+
+<img src="https://image.turiing.cn/images/2023/06/18/image-20230618145836296.png" alt="image-20230618145836296" style="zoom:80%;" />
