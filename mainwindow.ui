@@ -106,7 +106,7 @@
     <property name="title">
      <string>拾色器</string>
     </property>
-    <widget class="ColorPicker" name="widget" native="true">
+    <widget class="ColorPicker" name="widgetColorPicker" native="true">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -143,6 +143,42 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>190</y>
+      <width>331</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>电量显示</string>
+    </property>
+    <widget class="Battery" name="widgetBattery" native="true">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>50</y>
+       <width>231</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSliderBattery">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>160</y>
+       <width>160</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -150,7 +186,7 @@
      <x>0</x>
      <y>0</y>
      <width>1180</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -167,6 +203,12 @@
    <class>ColorPicker</class>
    <extends>QWidget</extends>
    <header>ColorPicker.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Battery</class>
+   <extends>QWidget</extends>
+   <header>Battery.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

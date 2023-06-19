@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include <QSlider>
 
 #include "iplineedit.h"
 #include "ColorPicker.h"

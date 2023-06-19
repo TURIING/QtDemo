@@ -12,17 +12,18 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     /* 初始化 */
     ui->setupUi(this);
 
-    // IP编辑框
+    /* IP编辑框 */
     ui->label_ip->setStyleSheet("color:red;");
-    // GifCapture
-    m_gifCapture = new GifCapture();
-    m_gifCapture->setWindowFlags(Qt::WindowStaysOnTopHint | m_gifCapture->windowFlags());
-
-
-    /* 信号槽 */
     connect(ui->btn_makeIP, &QPushButton::clicked, this, &MainWindow::onBtnMakeIPClicked);
     connect(ui->btn_clearIP, &QPushButton::clicked, this, &MainWindow::onBtnClearIPClicked);
+    /* GifCapture */
+    m_gifCapture = new GifCapture();
+    m_gifCapture->setWindowFlags(Qt::WindowStaysOnTopHint | m_gifCapture->windowFlags());
     connect(ui->btn_gifPopup, &QPushButton::clicked, this, &MainWindow::onBtnGifPopupClicked);
+
+    /* Battery */
+    connect(ui->horizontalSliderBattery, &QSlider::valueChanged, ui->widgetBattery, &Battery::setTargetValue);
+    ui->horizontalSliderBattery->setValue(30);
 
 }
 

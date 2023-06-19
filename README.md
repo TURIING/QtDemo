@@ -18,3 +18,9 @@
 <img src="https://image.turiing.cn/images/2023/06/18/image-20230618145734843.png" alt="image-20230618145734843" style="zoom:80%;" />
 
 <img src="https://image.turiing.cn/images/2023/06/18/image-20230618145836296.png" alt="image-20230618145836296" style="zoom:80%;" />
+
+## 电量显示
+
+<img src="https://image.turiing.cn/images/2023/06/19/image-20230619130721850.png" alt="image-20230619130721850" style="zoom:80%;" />
+
+涉及：QPainter、QLinearGradient、QTimer
