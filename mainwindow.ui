@@ -179,6 +179,42 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>290</y>
+      <width>251</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>滚动字符</string>
+    </property>
+    <widget class="ScrollText" name="widgetScrollText" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_scrollText">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>垂直滚动</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -209,6 +245,12 @@
    <class>Battery</class>
    <extends>QWidget</extends>
    <header>Battery.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ScrollText</class>
+   <extends>QWidget</extends>
+   <header>ScrollText.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

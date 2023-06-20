@@ -24,3 +24,9 @@
 <img src="https://image.turiing.cn/images/2023/06/19/image-20230619130721850.png" alt="image-20230619130721850" style="zoom:80%;" />
 
 涉及：QPainter、QLinearGradient、QTimer
+
+## 垂直滚动的文本
+
+<img src="https://image.turiing.cn/images/2023/06/20/demo.gif" alt="demo" style="zoom:80%;" />
+
+涉及：QPropertyAnimation、QResizeEvent

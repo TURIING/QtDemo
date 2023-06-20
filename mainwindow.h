@@ -12,6 +12,7 @@
 #include "iplineedit.h"
 #include "ColorPicker.h"
 #include "GifCapture.h"
+#include "ScrollText.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -30,10 +31,12 @@ private:
     Ui::MainWindow *ui;
     GifCapture *m_gifCapture;
 
+
 private slots:
     void onBtnMakeIPClicked();
     void onBtnClearIPClicked();
     void onBtnGifPopupClicked();
+    void onBtnScrollTextClicked();
 };
 
 

@@ -25,6 +25,10 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->horizontalSliderBattery, &QSlider::valueChanged, ui->widgetBattery, &Battery::setTargetValue);
     ui->horizontalSliderBattery->setValue(30);
 
+    /* ScrollText */
+    ui->widgetScrollText->setText("我是一段滚动的文字");
+    connect(ui->btn_scrollText, &QPushButton::clicked, this, &MainWindow::onBtnScrollTextClicked);
+
 }
 
 MainWindow::~MainWindow() {
@@ -43,6 +47,10 @@ void MainWindow::onBtnClearIPClicked() {
 
 void MainWindow::onBtnGifPopupClicked() {
     m_gifCapture->show();
+}
+
+void MainWindow::onBtnScrollTextClicked() {
+    ui->widgetScrollText->setText("我是一段滚动的文字");
 }
 
 
