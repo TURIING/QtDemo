@@ -47,7 +47,6 @@ void ScrollText::setText(QString _text) {
 }
 
 void ScrollText::resizeEvent(QResizeEvent *_event) {
-    qDebug() << "resizeEvent";
     auto width = _event->size().width();
     auto height = _event->size().height();
 

@@ -30,3 +30,9 @@
 <img src="https://image.turiing.cn/images/2023/06/20/demo.gif" alt="demo" style="zoom:80%;" />
 
 涉及：QPropertyAnimation、QResizeEvent
+
+## 水波进度球
+
+<img src="https://image.turiing.cn/images/2023/06/21/fe.gif" alt="fe" style="zoom:67%;" />
+
+涉及：QPainter、QPainterPath、QMouseEvent(press、release、move)

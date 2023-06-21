@@ -29,9 +29,15 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     ui->widgetScrollText->setText("我是一段滚动的文字");
     connect(ui->btn_scrollText, &QPushButton::clicked, this, &MainWindow::onBtnScrollTextClicked);
 
+    m_sphericalProgressBar = new SphericalProgressBar();
+    connect(ui->btn_sphericalProgressBarPop, &QPushButton::clicked, this, &MainWindow::onBtnSphericalProgressBarPopClicked);
+    connect(ui->btn_sphericalProgressBarStart, &QPushButton::clicked, m_sphericalProgressBar, &SphericalProgressBar::start);
+    connect(ui->btn_sphericalProgressBarReset, &QPushButton::clicked, m_sphericalProgressBar, &SphericalProgressBar::reset);
+
 }
 
 MainWindow::~MainWindow() {
+    delete m_sphericalProgressBar;
     delete m_gifCapture;
     delete ui;
 }
@@ -51,6 +57,12 @@ void MainWindow::onBtnGifPopupClicked() {
 
 void MainWindow::onBtnScrollTextClicked() {
     ui->widgetScrollText->setText("我是一段滚动的文字");
+}
+
+
+
+void MainWindow::onBtnSphericalProgressBarPopClicked() {
+    m_sphericalProgressBar->show();
 }
 
 

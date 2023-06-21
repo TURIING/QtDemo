@@ -13,7 +13,7 @@
 #include "ColorPicker.h"
 #include "GifCapture.h"
 #include "ScrollText.h"
-
+#include "SphericalProgressBar.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,6 +30,7 @@ public:
 private:
     Ui::MainWindow *ui;
     GifCapture *m_gifCapture;
+    SphericalProgressBar *m_sphericalProgressBar;
 
 
 private slots:
@@ -37,6 +38,7 @@ private slots:
     void onBtnClearIPClicked();
     void onBtnGifPopupClicked();
     void onBtnScrollTextClicked();
+    void onBtnSphericalProgressBarPopClicked();
 };
 
 
