@@ -34,6 +34,8 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->btn_sphericalProgressBarStart, &QPushButton::clicked, m_sphericalProgressBar, &SphericalProgressBar::start);
     connect(ui->btn_sphericalProgressBarReset, &QPushButton::clicked, m_sphericalProgressBar, &SphericalProgressBar::reset);
 
+    /* Marquee */
+    ui->labelMarquee->setText(QStringLiteral("花开一千年，花落一千年，花叶生生相错，世世永不相见。彼岸花开开彼岸，奈何桥前可奈何"));
 }
 
 MainWindow::~MainWindow() {
