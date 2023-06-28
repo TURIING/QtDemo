@@ -36,3 +36,15 @@
 <img src="https://image.turiing.cn/images/2023/06/21/fe.gif" alt="fe" style="zoom:67%;" />
 
 涉及：QPainter、QPainterPath、QMouseEvent(press、release、move)
+
+## 跑马灯
+
+<img src="https://image.turiing.cn/images/2023/06/26/ferer.gif" alt="ferer" style="zoom: 80%;" />
+
+涉及：QTextDocument、QStyleOption、QPainter、paintEvent、QStringLiteral
+
+## 按钮切换组
+
+<img src="https://image.turiing.cn/images/2023/06/28/grtr.gif" alt="grtr" style="zoom:80%;" />
+
+涉及：QPalette、QMouseEvent（Press、Move、enter、leave）、QPainter

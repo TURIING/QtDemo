@@ -14,6 +14,7 @@
 #include "GifCapture.h"
 #include "ScrollText.h"
 #include "SphericalProgressBar.h"
+#include "SwitchButton.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

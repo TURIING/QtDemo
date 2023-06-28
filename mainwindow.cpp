@@ -35,7 +35,14 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->btn_sphericalProgressBarReset, &QPushButton::clicked, m_sphericalProgressBar, &SphericalProgressBar::reset);
 
     /* Marquee */
-    ui->labelMarquee->setText(QStringLiteral("花开一千年，花落一千年，花叶生生相错，世世永不相见。彼岸花开开彼岸，奈何桥前可奈何"));
+    ui->labelMarquee->setText(QStringLiteral("去留无意，闲看庭前花开花落；宠辱不惊，漫随天外云卷云舒"));
+
+    /* SwitchButton */
+    ui->widgetSwitchButton->append(QStringLiteral("Pretty"), 90);
+    ui->widgetSwitchButton->append(QStringLiteral("Raw"), 70);
+    ui->widgetSwitchButton->append(QStringLiteral("Preview"), 100);
+    ui->widgetSwitchButton->append(QStringLiteral("Visualize"), 100);
+    ui->widgetSwitchButton->setCurrentIndex(1);
 }
 
 MainWindow::~MainWindow() {

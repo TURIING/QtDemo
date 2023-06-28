@@ -40,7 +40,7 @@ void Marquee::setText(const QString &_text) {
     QString content = QStringLiteral("<font style='font-family:MicrosoftYaHei;font-size:14px;color: #01EEC3;'>%1</font>").arg(_text);
     m_timer.start(10);
     QLabel::setText(content);
-    this->adjustSize();
+//    this->adjustSize();
     m_posX = this->width();
 }
 
