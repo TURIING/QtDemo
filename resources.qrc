@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/GraphicsEffect">
+        <file>Resources/effect/1.png</file>
+        <file>Resources/effect/2.png</file>
+        <file>Resources/effect/3.png</file>
+        <file>Resources/effect/4.png</file>
+    </qresource>
+    <qresource prefix="/tree/Resources"/>
+    <qresource prefix="/tree/Resources/QSS">
+        <file>Resources/QSS/MainWindow.css</file>
+    </qresource>
+</RCC>

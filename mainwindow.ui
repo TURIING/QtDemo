@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1180</width>
-    <height>766</height>
+    <width>847</width>
+    <height>773</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -450,7 +450,7 @@
       <x>640</x>
       <y>30</y>
       <width>181</width>
-      <height>521</height>
+      <height>491</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -465,10 +465,36 @@
      <property name="geometry">
       <rect>
        <x>40</x>
-       <y>30</y>
+       <y>20</y>
        <width>101</width>
        <height>461</height>
       </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_10">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>520</y>
+      <width>181</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>GraphicsEffect</string>
+    </property>
+    <widget class="QPushButton" name="btn_graphicsEffect">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>点击弹出</string>
      </property>
     </widget>
    </widget>
@@ -478,7 +504,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1180</width>
+     <width>847</width>
      <height>26</height>
     </rect>
    </property>

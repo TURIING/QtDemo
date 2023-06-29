@@ -15,6 +15,7 @@
 #include "ScrollText.h"
 #include "SphericalProgressBar.h"
 #include "SwitchButton.h"
+#include "graphicseffect.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,9 +31,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    GifCapture *m_gifCapture;
-    SphericalProgressBar *m_sphericalProgressBar;
-
+    GifCapture *m_gifCapture = nullptr;
+    SphericalProgressBar *m_sphericalProgressBar = nullptr;
+    GraphicsEffect *m_graphicsEffect = nullptr;
 
 private slots:
     void onBtnMakeIPClicked();

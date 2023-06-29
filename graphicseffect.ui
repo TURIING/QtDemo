@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GraphicsEffect</class>
+ <widget class="QWidget" name="GraphicsEffect">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GraphicsEffect</string>
+  </property>
+  <widget class="QLabel" name="label_blur">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>40</y>
+     <width>192</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/GraphicsEffect/Resources/effect/1.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_opacity">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>40</y>
+     <width>192</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/GraphicsEffect/Resources/effect/2.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dropShadow">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>280</y>
+     <width>192</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/GraphicsEffect/Resources/effect/4.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_colorize">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>280</y>
+     <width>192</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/GraphicsEffect/Resources/effect/3.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_blur">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>530</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>532</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>模糊</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_opacity">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>528</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>530</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>透明</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_colorize">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>578</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>580</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>颜色</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider_shadow">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>578</y>
+     <width>191</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>580</y>
+     <width>31</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>阴影</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

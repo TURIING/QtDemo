@@ -39,6 +39,8 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
 
     /* SwitchButton */
     ui->widgetSwitchButton->append(QStringLiteral("Pretty"), 90);
+
+
     ui->widgetSwitchButton->append(QStringLiteral("Raw"), 70);
     ui->widgetSwitchButton->append(QStringLiteral("Preview"), 100);
     ui->widgetSwitchButton->append(QStringLiteral("Visualize"), 100);
@@ -53,9 +55,14 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     ui->widgetMenuSwitcher->append(QStringLiteral("History"), QStringLiteral("../Resources/history_active.svg"), QStringLiteral("../Resources/history_unactive.svg"), QStringLiteral("../Resources/history_active.svg"));
     ui->widgetMenuSwitcher->setDefaultItem(0);
     connect(ui->widgetMenuSwitcher, &MenuSwitcher::indexChanged, this, [=](int _index) { qDebug() << "currentItem = " << _index; });
+
+    /* GraphicsEffect */
+    m_graphicsEffect = new GraphicsEffect();
+    connect(ui->btn_graphicsEffect, &QPushButton::clicked, this, [=]{ m_graphicsEffect->show();});
 }
 
 MainWindow::~MainWindow() {
+    delete m_graphicsEffect;
     delete m_sphericalProgressBar;
     delete m_gifCapture;
     delete ui;

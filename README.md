@@ -58,3 +58,9 @@
 <img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-10-15-50.gif" alt="GIF 2023-6-29 10-15-50" style="zoom:80%;" />
 
 涉及：QPalette、QVector、QMouseEvent、QSvgRenderer、QPixmap
+
+## 特效
+
+<img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-12-41-25.gif" alt="GIF 2023-6-29 12-41-25" style="zoom:80%;" />
+
+涉及：QGraphicsBlurEffect、QGraphicsColorizeEffect、QGraphicsDropShadowEffect
