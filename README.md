@@ -1,4 +1,8 @@
 # QtDemo
+
+
+**环境**：Clion、Cmake、MinGW
+
 绘制一些自定义控件以及小案例
 
 ## IP输入框
@@ -48,3 +52,9 @@
 <img src="https://image.turiing.cn/images/2023/06/28/grtr.gif" alt="grtr" style="zoom:80%;" />
 
 涉及：QPalette、QMouseEvent（Press、Move、enter、leave）、QPainter
+
+## 菜单切换组
+
+<img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-10-15-50.gif" alt="GIF 2023-6-29 10-15-50" style="zoom:80%;" />
+
+涉及：QPalette、QVector、QMouseEvent、QSvgRenderer、QPixmap

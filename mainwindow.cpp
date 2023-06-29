@@ -43,6 +43,16 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     ui->widgetSwitchButton->append(QStringLiteral("Preview"), 100);
     ui->widgetSwitchButton->append(QStringLiteral("Visualize"), 100);
     ui->widgetSwitchButton->setCurrentIndex(1);
+
+    /* MenuSwitcher */
+    ui->widgetMenuSwitcher->append(QStringLiteral("Collections"), QStringLiteral("../Resources/collections_active.svg"), QStringLiteral("../Resources/collections_unactive.svg"), QStringLiteral("../Resources/collections_active.svg"));
+    ui->widgetMenuSwitcher->append(QStringLiteral("APIs"), QStringLiteral("../Resources/apis_active.svg"), QStringLiteral("../Resources/apis_unactive.svg"), QStringLiteral("../Resources/apis_active.svg"));
+    ui->widgetMenuSwitcher->append(QStringLiteral("Environments"), QStringLiteral("../Resources/environments_active.svg"), QStringLiteral("../Resources/environments_unactive.svg"), QStringLiteral("../Resources/environments_active.svg"));
+    ui->widgetMenuSwitcher->append(QStringLiteral("Mock Servers"), QStringLiteral("../Resources/mock_servers_active.svg"), QStringLiteral("../Resources/mock_servers_unactive.svg"), QStringLiteral("../Resources/mock_servers_active.svg"));
+    ui->widgetMenuSwitcher->append(QStringLiteral("Monitors"), QStringLiteral("../Resources/monitors_active.svg"), QStringLiteral("../Resources/monitors_unactive.svg"), QStringLiteral("../Resources/monitors_active.svg"));
+    ui->widgetMenuSwitcher->append(QStringLiteral("History"), QStringLiteral("../Resources/history_active.svg"), QStringLiteral("../Resources/history_unactive.svg"), QStringLiteral("../Resources/history_active.svg"));
+    ui->widgetMenuSwitcher->setDefaultItem(0);
+    connect(ui->widgetMenuSwitcher, &MenuSwitcher::indexChanged, this, [=](int _index) { qDebug() << "currentItem = " << _index; });
 }
 
 MainWindow::~MainWindow() {

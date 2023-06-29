@@ -12,13 +12,15 @@ find_package(Qt5 COMPONENTS
         Core
         Gui
         Widgets
+        Svg
         REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR})
-add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h)
+add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h)
 target_link_libraries(QtDemo
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        Qt5::Svg
         )
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
@@ -42,7 +44,7 @@ if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
                 "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll"
                 "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
     endif ()
-    foreach (QT_LIB Core Gui Widgets)
+    foreach (QT_LIB Core Gui Widgets Svg)
         add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy
                 "${QT_INSTALL_PATH}/bin/Qt5${QT_LIB}${DEBUG_SUFFIX}.dll"
