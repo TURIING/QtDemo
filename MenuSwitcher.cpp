@@ -85,9 +85,12 @@ void MenuSwitcher::enterEvent(QEvent *_event) {
 }
 
 void MenuSwitcher::mousePressEvent(QMouseEvent *_event) {
-    m_currentItem = mousePosToIndex();
-    this->update();
-    emit indexChanged(m_currentItem);
+    auto index = mousePosToIndex();
+    if(_event->button() == Qt::LeftButton && m_currentItem != index) {
+        m_currentItem = index;
+        this->update();
+        emit indexChanged(m_currentItem);
+    }
 
     QWidget::mousePressEvent(_event);
 }
