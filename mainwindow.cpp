@@ -59,6 +59,18 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     /* GraphicsEffect */
     m_graphicsEffect = new GraphicsEffect();
     connect(ui->btn_graphicsEffect, &QPushButton::clicked, this, [=]{ m_graphicsEffect->show();});
+
+    /* PageSwitcher */
+    ui->widgetPageSwitcher->append(QStringLiteral("Params"));
+    ui->widgetPageSwitcher->append(QStringLiteral("Authorization"));
+    ui->widgetPageSwitcher->append(QStringLiteral("Headers"));
+    ui->widgetPageSwitcher->append(QStringLiteral("Body"), true);
+    ui->widgetPageSwitcher->append(QStringLiteral("Pre-request Script"));
+    ui->widgetPageSwitcher->append(QStringLiteral("Tests"));
+    ui->widgetPageSwitcher->append(QStringLiteral("Settings"));
+    ui->widgetPageSwitcher->setCurrentItem(1);
+    connect(ui->widgetPageSwitcher, &PageSwitcher::indexChanged, this, [=](int _index) { qDebug() << "PageSwitcher's current item:" << _index;});
+
 }
 
 MainWindow::~MainWindow() {
