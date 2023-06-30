@@ -64,3 +64,9 @@
 <img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-12-41-25.gif" alt="GIF 2023-6-29 12-41-25" style="zoom:80%;" />
 
 涉及：QGraphicsBlurEffect、QGraphicsColorizeEffect、QGraphicsDropShadowEffect
+
+## 页面切换器
+
+<img src="https://image.turiing.cn/images/2023/06/30/GIF-2023-6-30-10-27-05.gif" alt="GIF 2023-6-30 10-27-05" style="zoom:80%;" />
+
+新涉及：QFontMetrics

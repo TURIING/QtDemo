@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>847</width>
-    <height>773</height>
+    <height>862</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -450,7 +450,7 @@
       <x>640</x>
       <y>30</y>
       <width>181</width>
-      <height>491</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -467,7 +467,7 @@
        <x>40</x>
        <y>20</y>
        <width>101</width>
-       <height>461</height>
+       <height>451</height>
       </rect>
      </property>
     </widget>
@@ -495,6 +495,32 @@
      </property>
      <property name="text">
       <string>点击弹出</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_11">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>710</y>
+      <width>791</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>页面切换器</string>
+    </property>
+    <widget class="PageSwitcher" name="widgetPageSwitcher" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>731</width>
+       <height>61</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -551,6 +577,12 @@
    <class>MenuSwitcher</class>
    <extends>QWidget</extends>
    <header>MenuSwitcher.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PageSwitcher</class>
+   <extends>QWidget</extends>
+   <header>PageSwitcher.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
