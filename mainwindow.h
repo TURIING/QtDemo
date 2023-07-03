@@ -8,6 +8,8 @@
 #include <QMainWindow>
 #include <QPushButton>
 #include <QSlider>
+#include <QGraphicsDropShadowEffect>
+#include <QStandardItemModel>
 
 #include "iplineedit.h"
 #include "ColorPicker.h"
@@ -16,6 +18,8 @@
 #include "SphericalProgressBar.h"
 #include "SwitchButton.h"
 #include "graphicseffect.h"
+#include "AnimationButton.h"
+#include "MovableTableView/MovableTableView.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -28,6 +32,8 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow() override;
+private:
+    void initTable();
 
 private:
     Ui::MainWindow *ui;
@@ -41,6 +47,10 @@ private slots:
     void onBtnGifPopupClicked();
     void onBtnScrollTextClicked();
     void onBtnSphericalProgressBarPopClicked();
+    void onBtnAnimationButtonClicked();
+    void onActionAddRowTriggered();
+    void onActionDeleteRowTriggered();
+    void onActionClearTableTriggered();
 };
 
 

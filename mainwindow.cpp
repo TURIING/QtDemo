@@ -71,6 +71,19 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     ui->widgetPageSwitcher->setCurrentItem(1);
     connect(ui->widgetPageSwitcher, &PageSwitcher::indexChanged, this, [=](int _index) { qDebug() << "PageSwitcher's current item:" << _index;});
 
+    /* AnimationButton */
+    QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect(this);
+    shadowEffect->setOffset(3, 5);
+    shadowEffect->setColor(QColor("#44888888"));
+    shadowEffect->setBlurRadius(20);
+    ui->btn_animationButton->setGraphicsEffect(shadowEffect);
+    connect(ui->btn_animationButton, &QPushButton::clicked, this, &MainWindow::onBtnAnimationButtonClicked);
+
+    /* MovableTableView */
+    initTable();
+    connect(ui->actionAddRow, &QAction::triggered, this, &MainWindow::onActionAddRowTriggered);
+    connect(ui->actionDeleteRow, &QAction::triggered, this, &MainWindow::onActionDeleteRowTriggered);
+    connect(ui->actionClearTable, &QAction::triggered, this, &MainWindow::onActionClearTableTriggered);
 }
 
 MainWindow::~MainWindow() {
@@ -101,6 +114,107 @@ void MainWindow::onBtnScrollTextClicked() {
 
 void MainWindow::onBtnSphericalProgressBarPopClicked() {
     m_sphericalProgressBar->show();
+}
+
+void MainWindow::onBtnAnimationButtonClicked() {
+    const int totalCount = 2;
+    static int index = -1;
+    int dx = 0;
+
+    // -
+    AnimationButton::Status status[totalCount];
+    int i = 0;
+    status[i].bgSize = QSize(50, 50);
+    status[i].bgColor = Qt::white;
+    status[i].bgRadius = 10;
+    status[i].lineUseNum = 1;
+    status[i].linePos[0] = QLineF(15, 15, 45, 15);
+    status[i].lineHidePos[0] = QPointF(50, 50);
+    status[i].lineColors[0] = QColor("#ed657d");
+
+    // +
+    i++;
+    status[i].bgSize = QSize(-1, -1);
+    status[i].bgColor = Qt::white;
+    status[i].bgRadius = 30;
+    status[i].lineUseNum = 2;
+    status[i].linePos[0] = QLineF(35, 50, 65, 50);
+    status[i].linePos[1] = QLineF(50, 65, 50, 35);
+    status[i].lineHidePos[0] = QPointF(50, 50);
+    status[i].lineHidePos[1] = QPointF(50, 50);
+    status[i].lineColors[0] = QColor("#5baaf8");
+    status[i].lineColors[1] = QColor("#5baaf8");
+
+    if(++index >= totalCount)
+        index = 0;
+    ui->btn_animationButton->load(status[index]);
+}
+
+void MainWindow::initTable() {
+    auto table = ui->tableViewMovable;
+    /* 设置表格属性 */
+    // 隐藏垂直方向的表头
+    table->verticalHeader()->hide();
+    // 设置列高度
+    table->verticalHeader()->setDefaultSectionSize(30);
+    // 最后一列自适应宽度
+    table->horizontalHeader()->setStretchLastSection(true);
+    // 设置双击编辑
+    table->setEditTriggers(QTableView::DoubleClicked);
+    // 一次选中整行
+    table->setSelectionBehavior(QTableView::SelectRows);
+    // 单行选中
+    table->setSelectionMode(QTableView::SingleSelection);
+    // 行间隔色
+    table->setAlternatingRowColors(true);
+    // 启用拖拽
+    table->setDragDropMode(QAbstractItemView::DropOnly);
+
+    table->horizontalHeader()->setMinimumHeight(30);
+
+    table->setStyleSheet("QTableView { border: 1px solid gray; background: #E8E8E8; }\
+                          QTableView::item{ color: black; }\
+                          QTableView::item::selected{ color: black; background: #63B8FF;}");
+    table->setColumnWidth(0, 80);
+
+    /* 添加数据 */
+    auto model = new QStandardItemModel();
+    auto selectModel = new QItemSelectionModel(model);
+    model->setHorizontalHeaderItem(0, new QStandardItem(QStringLiteral("序号")));
+    model->setHorizontalHeaderItem(1, new QStandardItem(QStringLiteral("代号")));
+    model->setHorizontalHeaderItem(2, new QStandardItem(QStringLiteral("任务")));
+
+    QStringList mark, mission;
+    mark<<"111"<<"222"<<"333"<<"444"<<"555"<<"AAA"<<"BBB"<<"CCC"<<"DDD"<<"EEE";
+    mission<<"0x00"<<"0x01"<<"0x02"<<"0x03"<<"0x04"<<"0x05"<<"0x06"<<"0x07"<<"0x08"<<"0x09";
+    for(auto i = 0; i < mark.count(); i++) {
+        model->setItem(i, 0, new QStandardItem(QString::number(i + 1)));
+        model->item(i, 0)->setTextAlignment(Qt::AlignCenter);
+        model->setItem(i, 1, new QStandardItem(mark[i]));
+        model->item(i, 1)->setTextAlignment(Qt::AlignCenter);
+        model->setItem(i, 2, new QStandardItem(mission[i]));
+        model->item(i, 2)->setTextAlignment(Qt::AlignCenter);
+    }
+    table->setModel(model);
+    table->setSelectionModel(selectModel);
+
+    /* 设置右键菜单 */
+    QList<QAction *> actions;
+    actions << ui->actionAddRow << ui->actionDeleteRow << ui->actionClearTable;
+    table->setContextMenuPolicy(Qt::ActionsContextMenu);
+    table->addActions(actions);
+}
+
+void MainWindow::onActionAddRowTriggered() {
+    ui->tableViewMovable->addRow();
+}
+
+void MainWindow::onActionDeleteRowTriggered() {
+    ui->tableViewMovable->deleteRow();
+}
+
+void MainWindow::onActionClearTableTriggered() {
+    ui->tableViewMovable->clearRow();
 }
 
 

@@ -14,8 +14,8 @@ find_package(Qt5 COMPONENTS
         Widgets
         Svg
         REQUIRED)
-include_directories(${CMAKE_SOURCE_DIR})
-add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h)
+include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/MovableTableView )
+add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h AnimationButton.cpp AnimationButton.h MovableTableView/MovableTableView.cpp MovableTableView/MovableTableView.h)
 target_link_libraries(QtDemo
         Qt5::Core
         Qt5::Gui

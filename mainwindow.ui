@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>847</width>
+    <width>1508</width>
     <height>862</height>
    </rect>
   </property>
@@ -524,18 +524,82 @@
      </property>
     </widget>
    </widget>
+   <widget class="QGroupBox" name="groupBox_12">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>30</y>
+      <width>191</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>按钮动画效果</string>
+    </property>
+    <widget class="AnimationButton" name="btn_animationButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>93</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_13">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>180</y>
+      <width>541</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>可拖动的表格</string>
+    </property>
+    <widget class="MovableTableView" name="tableViewMovable">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>521</width>
+       <height>301</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>847</width>
+     <width>1508</width>
      <height>26</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddRow">
+   <property name="text">
+    <string>添加行</string>
+   </property>
+  </action>
+  <action name="actionDeleteRow">
+   <property name="text">
+    <string>删除行</string>
+   </property>
+  </action>
+  <action name="actionClearTable">
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -584,6 +648,16 @@
    <extends>QWidget</extends>
    <header>PageSwitcher.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AnimationButton</class>
+   <extends>QPushButton</extends>
+   <header>AnimationButton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MovableTableView</class>
+   <extends>QTableView</extends>
+   <header>MovableTableView.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

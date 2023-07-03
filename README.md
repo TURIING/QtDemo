@@ -70,3 +70,11 @@
 <img src="https://image.turiing.cn/images/2023/06/30/GIF-2023-6-30-10-27-05.gif" alt="GIF 2023-6-30 10-27-05" style="zoom:80%;" />
 
 新涉及：QFontMetrics
+
+## 可拖动的表格
+
+<img src="https://image.turiing.cn/images/2023/07/03/GIF-2023-7-3-14-20-42.gif" alt="GIF 2023-7-3 14-20-42" style="zoom:80%;" />
+
+（拖动时携带行数据的透明阴影，gif图片颜色未能显示出来）
+
+新涉及：QTableView、QStandardItemModel、QItemSelectionModel、QDrag、QMimeData、QModelIndex、QDragEnterEvent（enter、move、drop）
