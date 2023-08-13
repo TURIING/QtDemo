@@ -78,3 +78,9 @@
 （拖动时携带行数据的透明阴影，gif图片颜色未能显示出来）
 
 新涉及：QTableView、QStandardItemModel、QItemSelectionModel、QDrag、QMimeData、QModelIndex、QDragEnterEvent（enter、move、drop）
+
+## 手写画板
+
+<img src="https://image.turiing.cn/images/2023/08/13/image-20230813213644672.png" alt="image-20230813213644672" style="zoom:67%;" />
+
+鼠标左键单击绘画，右键单击清空，左键双击保存为图片

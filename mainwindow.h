@@ -20,6 +20,9 @@
 #include "graphicseffect.h"
 #include "AnimationButton.h"
 #include "MovableTableView/MovableTableView.h"
+#include "FrameLessWindow/FrameLessWindow.h"
+//#include "MultiLevelMenu/MultiLevelMenu.h"
+#include "SketchBoard/SketchBoard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,6 +43,8 @@ private:
     GifCapture *m_gifCapture = nullptr;
     SphericalProgressBar *m_sphericalProgressBar = nullptr;
     GraphicsEffect *m_graphicsEffect = nullptr;
+    FrameLessWindow *m_framelessWindow;
+    SketchBoard *m_sketchBoard = nullptr;
 
 private slots:
     void onBtnMakeIPClicked();
@@ -51,6 +56,7 @@ private slots:
     void onActionAddRowTriggered();
     void onActionDeleteRowTriggered();
     void onActionClearTableTriggered();
+    void onBtnFrameLessClicked();
 };
 
 

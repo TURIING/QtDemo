@@ -7,7 +7,6 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/Qt5.14.2/5.14.2/mingw73_64")
-
 find_package(Qt5 COMPONENTS
         Core
         Gui
@@ -15,14 +14,14 @@ find_package(Qt5 COMPONENTS
         Svg
         REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/MovableTableView )
-add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h AnimationButton.cpp AnimationButton.h MovableTableView/MovableTableView.cpp MovableTableView/MovableTableView.h)
+add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h AnimationButton.cpp AnimationButton.h MovableTableView/MovableTableView.cpp MovableTableView/MovableTableView.h FrameLessWindow/FrameLessWindow.cpp FrameLessWindow/FrameLessWindow.h FrameLessWindow/TitleBar.cpp FrameLessWindow/TitleBar.h FrameLessWindow/windoweffect.h FrameLessWindow/windoweffect.cpp SketchBoard/SketchBoard.h)
 target_link_libraries(QtDemo
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
         Qt5::Svg
+        D:/TURIING/Temp/QtDemo/dwmapi.dll
         )
-
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
     if (MSVC AND CMAKE_BUILD_TYPE MATCHES "Debug")

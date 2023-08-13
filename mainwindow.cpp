@@ -58,7 +58,7 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
 
     /* GraphicsEffect */
     m_graphicsEffect = new GraphicsEffect();
-    connect(ui->btn_graphicsEffect, &QPushButton::clicked, this, [=]{ m_graphicsEffect->show();});
+    connect(ui->btn_graphicsEffect, &QPushButton::clicked, this, [this]{ m_graphicsEffect->show();});
 
     /* PageSwitcher */
     ui->widgetPageSwitcher->append(QStringLiteral("Params"));
@@ -84,6 +84,29 @@ MainWindow::MainWindow(QWidget *parent) :QMainWindow(parent), ui(new Ui::MainWin
     connect(ui->actionAddRow, &QAction::triggered, this, &MainWindow::onActionAddRowTriggered);
     connect(ui->actionDeleteRow, &QAction::triggered, this, &MainWindow::onActionDeleteRowTriggered);
     connect(ui->actionClearTable, &QAction::triggered, this, &MainWindow::onActionClearTableTriggered);
+
+    /* FrameLessWindow */
+    m_framelessWindow = new FrameLessWindow();
+    m_framelessWindow->resize(800, 600);
+    m_framelessWindow->setFixedSize(800, 600);
+    connect(ui->btnFrameLess, &QPushButton::clicked, this, &MainWindow::onBtnFrameLessClicked);
+
+    /* MultiLevelMenu */
+    //m_multiLevelMenu->addMenuItem("File");
+    //m_multiLevelMenu->addMenuItem("Edit");
+    //m_multiLevelMenu->addSeparator();
+    //m_multiLevelMenu->addMenuItem("View");
+    //m_multiLevelMenu->addMenuItem("Help");
+    //connect(ui->btnMenu, &QPushButton::clicked, [this]{
+    //    auto pos = ui->btnMenu->mapToGlobal(QPoint(0, 0));
+    //    m_multiLevelMenu->move(pos.x(), pos.y() + ui->btnMenu->height());
+    //    m_multiLevelMenu->show();
+    //});
+
+    m_sketchBoard = new SketchBoard();
+    connect(ui->btnSketchBoard, &QPushButton::clicked, [this]{
+        m_sketchBoard->show();
+    });
 }
 
 MainWindow::~MainWindow() {
@@ -216,5 +239,10 @@ void MainWindow::onActionDeleteRowTriggered() {
 void MainWindow::onActionClearTableTriggered() {
     ui->tableViewMovable->clearRow();
 }
+
+void MainWindow::onBtnFrameLessClicked() {
+    m_framelessWindow->show();
+}
+
 
 

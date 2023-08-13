@@ -100,6 +100,7 @@ void MenuSwitcher::mouseMoveEvent(QMouseEvent *_event) {
     this->update();
 
     QWidget::mouseMoveEvent(_event);
+
 }
 
 void MenuSwitcher::leaveEvent(QEvent *_event) {
