@@ -23,6 +23,8 @@
 #include "FrameLessWindow/FrameLessWindow.h"
 //#include "MultiLevelMenu/MultiLevelMenu.h"
 #include "SketchBoard/SketchBoard.h"
+#include "Charts/CurveChart.h"
+#include "Charts/AreaChart.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -45,6 +47,8 @@ private:
     GraphicsEffect *m_graphicsEffect = nullptr;
     FrameLessWindow *m_framelessWindow;
     SketchBoard *m_sketchBoard = nullptr;
+    CurveChart *m_curveChart = nullptr;
+    AreaChart *m_areaChart = nullptr;
 
 private slots:
     void onBtnMakeIPClicked();
@@ -57,6 +61,8 @@ private slots:
     void onActionDeleteRowTriggered();
     void onActionClearTableTriggered();
     void onBtnFrameLessClicked();
+    void on_btn_curveChart_clicked();
+    void on_btn_areaChart_clicked();
 };
 
 

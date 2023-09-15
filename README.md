@@ -7,61 +7,61 @@
 
 ## IP输入框
 
-<img src="https://image.turiing.cn/images/2023/06/13/image-20230613150535848.png" alt="image-20230613150535848" style="zoom: 80%;" />
+![image-20230613150535848](image/README/image-20230613150535848-16947839550491.png)
 
 **涉及**：事件过滤器、QSS、正则
 
 ## 拾色器
 
-![Snipaste_2023-06-13_23-03-18](https://image.turiing.cn/images/2023/06/13/Snipaste_2023-06-13_23-03-18.png)
+![Snipaste_2023-06-13_23-03-18](image/README/Snipaste_2023-06-13_23-03-18.png)
 
 **涉及**：QGridLayout、QVBoxLayout、QHBoxLayout、QScreen、QMouseEvent、QImage、QTimer、QLineEdit
 
 ## Gif录屏
 
-<img src="https://image.turiing.cn/images/2023/06/18/image-20230618145734843.png" alt="image-20230618145734843" style="zoom:80%;" />
+![image-20230618145734843](image/README/image-20230618145734843.png)
 
-<img src="https://image.turiing.cn/images/2023/06/18/image-20230618145836296.png" alt="image-20230618145836296" style="zoom:80%;" />
+![image-20230618145836296](image/README/image-20230618145836296.png)
 
 ## 电量显示
 
-<img src="https://image.turiing.cn/images/2023/06/19/image-20230619130721850.png" alt="image-20230619130721850" style="zoom:80%;" />
+![image-20230619130721850](image/README/image-20230619130721850.png)
 
 涉及：QPainter、QLinearGradient、QTimer
 
 ## 垂直滚动的文本
 
-<img src="https://image.turiing.cn/images/2023/06/20/demo.gif" alt="demo" style="zoom:80%;" />
+![demo](image/README/demo.gif)
 
 涉及：QPropertyAnimation、QResizeEvent
 
 ## 水波进度球
 
-<img src="https://image.turiing.cn/images/2023/06/21/fe.gif" alt="fe" style="zoom:67%;" />
+![fe](image/README/fe.gif)
 
 涉及：QPainter、QPainterPath、QMouseEvent(press、release、move)
 
 ## 跑马灯
 
-<img src="https://image.turiing.cn/images/2023/06/26/ferer.gif" alt="ferer" style="zoom: 80%;" />
+![ferer](image/README/ferer.gif)
 
 涉及：QTextDocument、QStyleOption、QPainter、paintEvent、QStringLiteral
 
 ## 按钮切换组
 
-<img src="https://image.turiing.cn/images/2023/06/28/grtr.gif" alt="grtr" style="zoom:80%;" />
+![grtr](image/README/grtr.gif)
 
 涉及：QPalette、QMouseEvent（Press、Move、enter、leave）、QPainter
 
 ## 菜单切换组
 
-<img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-10-15-50.gif" alt="GIF 2023-6-29 10-15-50" style="zoom:80%;" />
+![GIF-2023-6-29-10-15-50](image/README/GIF-2023-6-29-10-15-50.gif)
 
 涉及：QPalette、QVector、QMouseEvent、QSvgRenderer、QPixmap
 
 ## 特效
 
-<img src="https://image.turiing.cn/images/2023/06/29/GIF-2023-6-29-12-41-25.gif" alt="GIF 2023-6-29 12-41-25" style="zoom:80%;" />
+![GIF-2023-6-29-12-41-25](image/README/GIF-2023-6-29-12-41-25.gif)
 
 涉及：QGraphicsBlurEffect、QGraphicsColorizeEffect、QGraphicsDropShadowEffect
 
@@ -73,7 +73,7 @@
 
 ## 可拖动的表格
 
-<img src="https://image.turiing.cn/images/2023/07/03/GIF-2023-7-3-14-20-42.gif" alt="GIF 2023-7-3 14-20-42" style="zoom:80%;" />
+![GIF-2023-6-30-10-27-05](image/README/GIF-2023-6-30-10-27-05.gif)
 
 （拖动时携带行数据的透明阴影，gif图片颜色未能显示出来）
 
@@ -81,6 +81,6 @@
 
 ## 手写画板
 
-<img src="https://image.turiing.cn/images/2023/08/13/image-20230813213644672.png" alt="image-20230813213644672" style="zoom:67%;" />
+![image-20230813213644672](image/README/68747470733a2f2f696d6167652e74757269696e672e636e2f696d616765732f323032332f30382f31332f696d6167652d32303233303831333231333634343637322e706e67.png)
 
 鼠标左键单击绘画，右键单击清空，左键双击保存为图片

@@ -244,5 +244,17 @@ void MainWindow::onBtnFrameLessClicked() {
     m_framelessWindow->show();
 }
 
+void MainWindow::on_btn_curveChart_clicked() {
+    if(!m_curveChart) m_curveChart = new CurveChart();
+
+    m_curveChart->show();
+}
+
+void MainWindow::on_btn_areaChart_clicked() {
+    if(!m_areaChart) m_areaChart = new AreaChart();
+
+    m_areaChart->show();
+}
+
 
 

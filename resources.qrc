@@ -5,4 +5,23 @@
         <file>Resources/effect/3.png</file>
         <file>Resources/effect/4.png</file>
     </qresource>
+    <qresource prefix="/FrameLessWindow">
+        <file>Resources/frameless/default.qss</file>
+        <file>Resources/frameless/logo.png</file>
+        <file>Resources/frameless/minimize.png</file>
+        <file>Resources/frameless/minimize_h.png</file>
+        <file>Resources/frameless/minimize_p.png</file>
+        <file>Resources/frameless/maximize.png</file>
+        <file>Resources/frameless/maximize_h.png</file>
+        <file>Resources/frameless/maximize_p.png</file>
+        <file>Resources/frameless/restore.png</file>
+        <file>Resources/frameless/restore_h.png</file>
+        <file>Resources/frameless/restore_p.png</file>
+        <file>Resources/frameless/close.png</file>
+        <file>Resources/frameless/close_h.png</file>
+        <file>Resources/frameless/close_p.png</file>
+    </qresource>
+    <qresource prefix="/MultiLevelMenu">
+        <file>Resources/MultiLevelMenu/left_triangle_all.svg</file>
+    </qresource>
 </RCC>

@@ -12,15 +12,17 @@ find_package(Qt5 COMPONENTS
         Gui
         Widgets
         Svg
+        Charts
         REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/MovableTableView )
-add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h AnimationButton.cpp AnimationButton.h MovableTableView/MovableTableView.cpp MovableTableView/MovableTableView.h FrameLessWindow/FrameLessWindow.cpp FrameLessWindow/FrameLessWindow.h FrameLessWindow/TitleBar.cpp FrameLessWindow/TitleBar.h FrameLessWindow/windoweffect.h FrameLessWindow/windoweffect.cpp SketchBoard/SketchBoard.h)
+add_executable(QtDemo main.cpp iplineedit.cpp iplineedit.h mainwindow.cpp mainwindow.h mainwindow.ui ColorPicker.cpp ColorPicker.h GifCapture.cpp GifCapture.h Battery.cpp Battery.h ScrollText.h ScrollText.cpp SphericalProgressBar.cpp SphericalProgressBar.h DiskSpace.cpp DiskSpace.h DateRollBox.cpp DateRollBox.h Marquee.cpp Marquee.h EdgeHide.cpp EdgeHide.h SwitchButton.cpp SwitchButton.h MenuSwitcher.cpp MenuSwitcher.h graphicseffect.cpp graphicseffect.h graphicseffect.ui resources.qrc PageSwitcher.cpp PageSwitcher.h AnimationButton.cpp AnimationButton.h MovableTableView/MovableTableView.cpp MovableTableView/MovableTableView.h FrameLessWindow/FrameLessWindow.cpp FrameLessWindow/FrameLessWindow.h FrameLessWindow/TitleBar.cpp FrameLessWindow/TitleBar.h FrameLessWindow/windoweffect.h FrameLessWindow/windoweffect.cpp SketchBoard/SketchBoard.h Charts/CurveChart.h Charts/AreaChart.h Charts/BarChart.h)
 target_link_libraries(QtDemo
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
         Qt5::Svg
-        D:/TURIING/Temp/QtDemo/dwmapi.dll
+        Qt5::Charts
+        dwmapi.dll
         )
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
@@ -43,7 +45,7 @@ if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
                 "${QT_INSTALL_PATH}/plugins/platforms/qwindows${DEBUG_SUFFIX}.dll"
                 "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
     endif ()
-    foreach (QT_LIB Core Gui Widgets Svg)
+    foreach (QT_LIB Core Gui Widgets Svg Charts)
         add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy
                 "${QT_INSTALL_PATH}/bin/Qt5${QT_LIB}${DEBUG_SUFFIX}.dll"
